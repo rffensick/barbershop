@@ -1,0 +1,53 @@
+$default-font: "roboto-example", sans-serif
+$accent: orange
+$tr: transparent
+
+// colors
+$bg-darkgrey: #292929
+$bg-lightgrey: #f8f5f2
+
+// MEDIA
+$mobile-widths-only: 767px
+$tablet: 768px
+$desktop: 1200px
+// MEDIA END
+
+// CONTAINER
+=container
+	width: 320px
+	margin: 0 auto
+
+	@media (min-width: $tablet)
+		width: 640px
+
+	@media (min-width: $desktop)
+		width: 960px
+// CONTAINER END
+
+=counter($var)
+	counter-reset: $var
+	& > li:before
+		content: counter($var)
+		counter-increment: $var
+
+=placeholder-color($color)
+	&:-moz-placeholder,
+	&::-moz-placeholder
+		color: $color
+		opacity: 1
+	&::-webkit-input-placeholder
+		color: $color
+
+=text-overflow
+	overflow: hidden
+	text-oveflow: ellipsis
+	white-space: nowrap
+
+=tr($var)
+	transition: $var
+
+=clearfix
+	&:after
+		content: ''
+		clear: both
+		display: table

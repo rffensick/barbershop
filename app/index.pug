@@ -1,0 +1,15 @@
+include settings/settings
+include mixins/mixins
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		+settings()
+	body
+		include blocks/header/header
+		include blocks/footer/footer
+
+
+		link(rel="stylesheet" href="css/main.min.css")
+		script(src="js/scripts.min.js")
+	
