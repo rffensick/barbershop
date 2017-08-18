@@ -1,0 +1,43 @@
+.stats
+	+container
+	@media (min-width: $tablet)
+		position: relative
+		z-index: 1
+		margin-top: -184px
+
+		&__list
+			+clearfix
+			display: block
+
+	@media (min-width: $desktop)
+		+clearfix
+		margin-top: -159px
+
+	&__header
+		min-height: 130px
+		padding:
+			top: 27px
+			right: 38px
+			bottom: 26px
+			left: 38px
+		@media (min-width: $tablet)
+			+clearfix
+			padding:
+				top: 31px
+				right: 0px
+				bottom: 24px
+				left: 0px
+		@media (min-width: $desktop)
+			float: left
+			width: 240px
+			min-height: 263px
+			padding-left: 40px
+			padding-right: 40px
+
+	&__items
+		width: 100%
+		height: 320px
+		@media (min-width: $desktop)
+			float: left
+			display: block
+			width: 640px
