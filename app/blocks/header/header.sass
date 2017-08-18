@@ -45,12 +45,13 @@
 	position: relative
 	width: 320px
 	margin: 0 auto
-	min-height: 50px
+	min-height: 51px
 	background-color: #826550
 	@media (min-width: $tablet)
 		width: auto
 		min-height: 70px
 		margin: 0
+		background-color: black
 		&__wrapper
 			+container
 			+clearfix
@@ -59,16 +60,13 @@
 		font-weight: bold
 		@media (min-width: $tablet)
 			float: left
-			min-height: 70px
 		@media (min-width: $desktop)
 			&__items
 				width: 780px
 
 	&__user-items
-		min-height: 55px
 		@media (min-width: $tablet)
 			float: right
-			min-height: 70px
 		@media (min-width: $desktop)
 			width: 160px
 
@@ -88,7 +86,39 @@
 			border-top: 1px solid #886e5b
 			border-bottom: 1px solid #71543f
 		a[href]
+			&:hover
+				background-color: #755a46
+				border-top-color: #755a46
+			&:active
+				color: rgba(255,255,255, 0.3)
+
+				background-color: #6a4d38
+				border-top-color: #6a4d38
+
+	.main-nav__user-login
+		position: relative
+		
+		display: block
+		padding: 17px 21px
+		padding-left: 49px
+
+		line-height: 18px
+		font-size: 18px
+		color: #fff
+		text-decoration: none	
+
+		&:before
+			content: ''
+			position: absolute
+			top: 17px
+			left: 21px
+
+			+size(16px)
+
+			background-image: url("../img/login.png")
+			background-position: center
 			
+
 
 	&__toggle
 		position: absolute
@@ -153,3 +183,173 @@
 	&:active:before,
 	&:active:after
 		background-color: rgba(255,255,255, 0.3)
+
+
+
+
+
+@media (max-width: $mobile-only)
+	.main-nav--closed .main-nav__item
+		display: none
+		&--active
+			display: block
+
+	.main-nav--closed .main-nav__item--active
+		a
+			text-align: center
+			padding-right: 70px
+
+	.main-nav--closed .main-nav__user-items
+		display: none
+
+	.main-nav--opened .main-nav__wrapper
+		position: absolute
+		top: 0
+		right: 0
+		left: 70px
+		z-index: 10
+		height: 80vh
+		background-color: #6a4d38
+
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			z-index: 2
+
+			width: 7px
+			height: 100%
+
+			box-shadow: inset 4px 0 7px -2px rgba(0,0,0, 0.4)
+
+	.main-nav--nojs 
+		.main-nav__toggle
+			display: none
+
+		.main-nav__wrapper
+			position: static
+
+			height: auto
+
+		.main-nav__item
+			display: block
+			a
+				text-align: left
+
+		.main-nav__user-items
+			display: block
+
+@media (min-width: $tablet)
+	.main-nav__toggle
+		display: none
+
+	.main-nav__item
+		float: left
+
+		margin-right: 32px
+		&:last-child
+			margin-right: 0
+
+		&--active
+			position: relative
+
+			&:after
+				content: ''
+				position: absolute
+				right: 0
+				bottom: -3px
+				left: 0
+
+				height: 3px
+
+				background-color: #826550
+		
+	.main-nav__item
+		a
+			padding: 0
+			padding-top: 25px
+			padding-bottom: 23px
+
+			background: none
+			border: none
+
+		a[href]
+			&:hover
+				color: #826550
+				background-color: black
+
+			&:active
+				color: #fff
+				background-color: black
+				opacity: 0.3
+
+	.main-nav .main-nav__user-login
+		padding: 0
+		width: 60px
+		height: 70px
+
+		font-size: 0
+
+		&:before
+			top: 29px
+			left: 12px
+
+
+
+@media (min-width: $desktop)
+	.main-nav__item
+		margin-right: 0
+
+		&--active:after
+			width: 50%
+			transform: translate(50%, 0)
+
+		a
+			padding-right: 31px
+			padding-left: 31px
+
+		a[href]
+			&:hover
+				color: #000
+
+				background-color: #fff
+
+			&:active
+				color: rgba(0,0,0, 0.3)
+
+				background-color: #FFF
+				opacity: 1
+
+	.main-nav__user-items
+		width: auto
+		max-width: 160px
+
+	.main-nav .main-nav__user-login
+		position: relative
+
+		width: auto
+		height: auto
+
+		padding:
+			top: 25px
+			right: 30px
+			bottom: 23px
+			left: 50px
+
+		font-weight: bold
+		font-size: 18px
+		line-height: 24px
+		text-transform: uppercase
+		text-decoration: none
+
+		&:hover
+			color: #000
+			background-color: #fff
+			&:before
+				background-image: url("../img/login-black.png")
+
+		&:active
+			color: rgba(0,0,0, 0.3)
+
+			background-color: #FFF
