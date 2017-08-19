@@ -1,49 +1,141 @@
-.advantages
-	&__wrapper
-		+container
-		min-height: 320px
-		padding-top: 30px
-		@media (min-width: $tablet)
-			padding-top: 42px
+.price
+	margin: 50px 0
+	padding: 40px 20px
+	color: #fff
+	background-color: #353535
+	+container-fluid
 
-	&__items
-		list-style-type: none
-		padding: 0
-		margin: 0
-		@media (min-width: $tablet)
-			padding-bottom: 4px
-		@media (min-width: $desktop)
-			display: table
-			width: 100%
-			height: 275px
+	&__header
+		margin-top: 0
+		margin-bottom: 27px
+		font-size: 30px
+		line-height: 1
+		text-align: center
+		text-transform: uppercase
 
-	&__item
-		min-height: 145px
-		margin-bottom: 23px
-		padding: 0 44px
-		padding-top: 125px
-		&:nth-child(n+2)
+	&__table
+		display: block
+		font-size: 20px
+		line-height: 1.2
+
+		tbody
+			display: block
+
+		tr
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			margin-bottom: 15px
+
+		td
+			padding: 0 5px
+			font-weight: bold
+			display: block
+
+		.col-1
 			display: none
-		@media (min-width: $tablet)
-			min-height: 95px
-			margin: 0 30px
-			margin-bottom: 40px
-			padding: 0
-			padding-bottom: 39px
-			padding-left: 128px
-			&:nth-child(n+2)
-				display: block
-			&:last-child
-				margin-bottom: 0
-		@media (min-width: $desktop)
-			display: table-cell
-			width: 240px
-			margin: 0
-			padding: 0 40px
-			padding-top: 130px
-			&:nth-child(n+2)
+
+		.col-2
+			padding-left: 0
+			font-weight: bold
+
+		.col-3
+			order: 4
+			flex-basis: 100%
+			padding-left: 0
+			font-weight: 400
+
+		.col-4
+			padding-right: 0
+
+	&__discount
+		position: relative
+		height: 90px
+		margin-top: 25px
+		padding: 30px 10px
+		padding-left: 110px
+		border: 2px solid #5e5e5e
+		text-align: center
+
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 20px
+			+size(57px)
+			border: 2px solid white
+			border-radius: 50%
+			transform: translate(0,-50%)
+
+
+// TABLET
+
+@media (min-width: $tablet)
+	.price
+
+		&__header
+			text-align: left
+			margin-bottom: 50px
+			font-size: 40px
+
+		&__table
+			display: table
+			min-width: 100%
+
+			tbody
+				display: table-row-group
+
+			tr
+				display: table-row
+
+			td
 				display: table-cell
-			&:nth-child(2)
-				width: 200px
-				padding-left: 60px
-				padding-right: 60px
+				border: 2px solid #5e5e5e
+				padding: 12px 19px
+				vertical-align: top
+
+			.col-1
+				display: table-cell
+				text-align: center
+				font-weight: 400
+				color: rgba(255,255,255, 0.3)
+
+			.col-2
+				padding: 12px 19px
+
+			.col-3
+				width: auto
+				padding: 12px 19px
+
+			.col-4
+				padding: 12px 19px
+
+
+@media (min-width: $desktop)
+	.price
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+		&__header
+			width: 100%
+
+		&__table
+			min-width: auto
+
+		&__discount
+			width: 270px
+			height: auto
+			margin: 0
+			padding: 10px 50px
+			padding-top: 190px
+			font-size: 20px
+			line-height: 1.2
+			text-decoration: none
+			font-weight: normal
+
+			&:before
+				+size(140px)
+				left: 50%
+				top: 25px
+				transform: translate(-50%, 0)

@@ -1,21 +1,18 @@
 .page-header
 	@media (min-width: $tablet)
-		position: relative
+		display: flex
+		flex-direction: column
 		min-height: 70px
-		padding-bottom: 400px
 		background-color: #000
-	@media (min-width: $desktop)
-		padding-bottom: 648px
 
 	&__logo
+		order: 2
 		height: 85px
 		text-align: center
 		svg
 			width: 230px
 			height: 85px
 		@media (min-width: $tablet)
-			position: absolute
-			bottom: 0
 			width: 100%
 			height: 400px
 			background-color: #000
@@ -43,7 +40,7 @@
 
 .main-nav
 	position: relative
-	width: 320px
+	width: auto
 	margin: 0 auto
 	min-height: 51px
 	background-color: #826550
@@ -53,22 +50,17 @@
 		margin: 0
 		background-color: black
 		&__wrapper
-			+container
-			+clearfix
+			+container-fluid
+			display: flex
+			justify-content: space-between
 
 	&__items
 		font-weight: bold
 		@media (min-width: $tablet)
-			float: left
-		@media (min-width: $desktop)
-			&__items
-				width: 780px
+			flex-grow: 1
+			display: flex
+			flex-wrap: wrap
 
-	&__user-items
-		@media (min-width: $tablet)
-			float: right
-		@media (min-width: $desktop)
-			width: 160px
 
 	&__item
 		a
@@ -245,9 +237,8 @@
 		display: none
 
 	.main-nav__item
-		float: left
-
 		margin-right: 32px
+
 		&:last-child
 			margin-right: 0
 
