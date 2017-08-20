@@ -1,0 +1,56 @@
+.popup-login
+	background-color: #F9F5F2
+	padding: 20px 20px
+	position: absolute
+	top: 136px
+	left: 0
+	right: 0
+	color: black
+	z-index: 4
+	
+	h1 
+		color: black
+
+	&__header
+		font-size: 30px
+		line-height: 1
+		text-align: center
+		text-transform: uppercase
+
+	&__enter
+		font-size: 18px
+		line-height: 27px
+		text-align: center
+
+	&__group
+		position: relative
+
+	input[type="text"],
+	input[type="password"]
+		display: block
+		width: 100%
+		padding: 25px
+		height: 30px
+		margin: 5px 0
+		color: black
+		border: 1px solid #E9DED6
+		+placeholder-color(black)
+
+	&__check
+		display: inline-block
+		text-align: left
+		width: 50%
+		font-size: 18px
+
+	input[type="checkbox"]
+		margin-right: 9px
+		background: $tr
+
+
+	&__forgot
+		display: inline-block
+		text-align: right
+		width: 50%
+		font-size: 18px
+		color: black
+		text-decoration: underline
