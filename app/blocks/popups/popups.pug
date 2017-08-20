@@ -1,16 +1,23 @@
-section.popup-login
+section.popup-login.popup-login--closed
 	h2.popup-login__header Личный кабинет
 	p.popup-login__enter Введите свой логин и пароль, чтобы войти
 	form.popup-login__form
+
 		.popup-login__group
 			input(type="text" name="login" placeholder="Логин").popup-login__login
+
 		.popup-login__group
 			input(type="password" name="password" placeholder="Пароль").popup-login__password
-		label.popup-login__check
-			input(type="checkbox")
-			| Запомните меня
 
-		a(href="#").popup-login__forgot Я забыл пароль!
+		.popup-login__group-checkbox
+
+			label.popup-login__check
+				input(type="checkbox" checked)
+				| Запомните меня
+
+			a(href="#").popup-login__forgot Я забыл пароль!
+
 		.popup-login__group-enter
-			input(type="button" value="Войти")
-			input(type="button" value="Закрыть")
+			input(type="button" value="Войти в личный кабинет")
+			input(type="button" value="Закрыть").popup-login__close-btn
+			span
