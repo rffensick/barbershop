@@ -20,8 +20,32 @@ var navToggle = document.querySelector('.main-nav__toggle');
 var openMenu = document.querySelector('.main-nav__user-login');
 var popupLogin = document.querySelector('.popup-login');
 var closeBtn = document.querySelector('.popup-login__close-btn');
+var login = document.querySelector('[name=login]');
+var password = document.querySelector('[name=password]');
+var form = document.querySelector('.popup-login__form');
 
 navMain.classList.remove('main-nav--nojs');
+
+// ESC
+window.addEventListener('keydown', function(e) {
+	if (e.keyCode === 27) {
+		if (popupLogin.classList.contains('popup-login--opened')) {
+			popupLogin.classList.remove('popup-login--opened')
+			popupLogin.classList.add('popup-login--closed')
+		}
+	}
+});
+
+// SUBMIT
+form.addEventListener('submit', function(e) {
+	if (!login.value || !password.value) {
+		e.preventDefault();
+		popupLogin.classList.add('popup-login--error')
+		setTimeout(function() {
+			popupLogin.classList.remove('popup-login--error');
+		}, 500);
+	}
+});
 
 navToggle.addEventListener('click', function() {
 	if (navMain.classList.contains('main-nav--closed')) {
@@ -62,6 +86,7 @@ openMenu.addEventListener('click', function(e) {
 		navMain.classList.add('main-nav--opened');
 		navMain.classList.remove('main-nav--closed');
 	}
+	login.focus();
 });
 
 closeBtn.addEventListener('click', function() {

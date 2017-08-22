@@ -1,3 +1,22 @@
+@keyframes bounce
+	0%
+		transform: translateY(-2000px)
+	70%
+		transform: translateY(30px)
+	90%
+		transform: translateY(-10px)
+	100%
+		transform: translateY(0)
+
+@keyframes shake-error
+	0%, 100%
+		transform: translateX(0)
+	10%, 30%, 50%, 70%, 90%
+		transform: translateX(-10px)
+	20%, 40%, 60%, 70%, 80%
+		transform: translateX(10px)
+
+
 .popup-login
 	background-color: #F9F5F2
 	padding: 20px 20px
@@ -14,6 +33,10 @@
 
 	&--opened
 		display: block
+		animation: bounce 0.4s
+
+	&--error
+		animation: shake-error 0.6s
 	
 	h1 
 		color: black
@@ -47,6 +70,20 @@
 		&:focus
 			outline-color: #826550
 
+	input[name="login"]
+		background:
+			image: url('../img/icons/user.png')
+			repeat: no-repeat
+			size: 15px 15px
+			position: 90% center
+
+	input[name="password"]
+		background:
+			image: url('../img/icons/Locked.png')
+			repeat: no-repeat
+			size: 15px 15px
+			position: 90% center
+
 	&__group-checkbox
 		margin-top: 30px
 
@@ -73,7 +110,8 @@
 		display: flex
 		justify-content: space-between
 
-	input[type="button"]
+	input[type="button"],
+	input[type="submit"]
 		font-size: 18px
 		text-transform: uppercase
 		background-color: #826550
@@ -97,14 +135,12 @@
 @media (min-width: $tablet)
 	.popup-login
 		width: 460px
-		top: 160px
 		left: 50%
 		right: auto
 		margin-left: -230px
 		padding: 30px 70px
-	
 
-		input[type="button"]
+		input[type="submit"]
 			width: 100%
 
 		&__close-btn
