@@ -1,3 +1,4 @@
+// ANIMATION
 @keyframes bounce
 	0%
 		transform: translateY(-2000px)
@@ -164,6 +165,7 @@
 			+size(50px)
 			display: block
 			pointer-events: none
+			+tr(.25s ease)
 
 			&:before
 				content: ''
@@ -179,6 +181,7 @@
 
 			&:after,
 			&:before
+				+tr(1s ease)
 				content: ''
 				position: absolute
 				top: 24px
@@ -199,3 +202,10 @@
 			&:active:before,
 			&:active:after
 				background-color: rgba(255,255,255, 0.3)
+
+		&__close-btn:hover + span
+			&:after
+				transform: rotate(-405deg)
+			&:before
+				transform: rotate(-495deg)
+				

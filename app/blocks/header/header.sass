@@ -1,11 +1,12 @@
 .page-header
+	background-color: $bg-darkgrey
 	@media (min-width: $tablet)
 		display: flex
 		flex-direction: column
 		min-height: 70px
 		background-color: #000
 
-	&__logo
+	&__logo-mobile
 		order: 2
 		height: 85px
 		text-align: center
@@ -13,6 +14,18 @@
 			width: 230px
 			height: 85px
 		@media (min-width: $tablet)
+			display: none
+
+	&__logo
+		display: none
+		
+		@media (min-width: $tablet)
+			display: block
+
+			text-align: center
+
+			order: 2
+
 			width: 100%
 			height: 400px
 			background-color: #000
@@ -20,6 +33,16 @@
 			background-image: url(../img/back-tablet.jpg)
 			background-repeat: no-repeat
 			background-position: center -9px
+
+			svg
+				width: 375px
+				height: 120px
+				margin-top: 45px
+				#logotype-desktop
+					width: 375px
+					height: 100px
+
+			
 		@media (min-width: $desktop)
 			height: 648px
 
@@ -27,7 +50,8 @@
 			background-size: cover
 
 			svg
-				bottom: 435px
+				width: 370px
+				height: 165px
 
 
 // MENU

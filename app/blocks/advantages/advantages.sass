@@ -1,141 +1,141 @@
-.price
-	margin: 50px 0
-	padding: 40px 20px
-	color: #fff
-	background-color: #353535
-	+container-fluid
+.advantages
+	position: relative
+	padding-top: 45px
+	padding-bottom: 20%
+	background-color: $bg-darkgrey
 
-	&__header
-		margin-top: 0
-		margin-bottom: 27px
-		font-size: 30px
-		line-height: 1
+
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 47px
+
+		background: 
+			image: url('../img/treg-black.jpg')
+			position: center
+			repeat: no-repeat
+			size: 100% 100%
+	
+	&__wrapper
+		+container-fluid
+
+	&__items
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+
+	&__item
 		text-align: center
-		text-transform: uppercase
 
-	&__table
-		display: block
-		font-size: 20px
-		line-height: 1.2
-
-		tbody
-			display: block
-
-		tr
-			display: flex
-			justify-content: space-between
-			flex-wrap: wrap
-			margin-bottom: 15px
-
-		td
-			padding: 0 5px
-			font-weight: bold
-			display: block
-
-		.col-1
+		&:nth-child(n+2)
 			display: none
 
-		.col-2
-			padding-left: 0
-			font-weight: bold
+	&__icon
+		svg
+			width: 100px
+			height: 95px
 
-		.col-3
-			order: 4
-			flex-basis: 100%
-			padding-left: 0
-			font-weight: 400
+	&__title
+		font-size: 30px
+		font-weight: bold
+		line-height: 1
 
-		.col-4
-			padding-right: 0
+		text-transform: uppercase
 
-	&__discount
-		position: relative
-		height: 90px
-		margin-top: 25px
-		padding: 30px 10px
-		padding-left: 110px
-		border: 2px solid #5e5e5e
-		text-align: center
+	&__desc
+		padding: 0 45px
 
-		&:before
-			content: ''
-			position: absolute
-			top: 50%
-			left: 20px
-			+size(57px)
-			border: 2px solid white
-			border-radius: 50%
-			transform: translate(0,-50%)
+		font-size: 20px
+		line-height: 27px
+		font-weight: 400
 
+	&__dots
+		display: flex
+		justify-content: center
 
-// TABLET
+	&__dot
+		+size(10px)
+
+		border: 2px solid #959595
+
+		margin: 0 10px
+
+		transform: rotate(45deg)
+
+		cursor: pointer
+	
+	&__dot--active
+		border-color: white
+
+		background-color: white
 
 @media (min-width: $tablet)
-	.price
+	.advantages
+		padding-bottom: 5%
 
-		&__header
+		&__items
+			display: block
+			+clearfix
+
+		&__item
 			text-align: left
-			margin-bottom: 50px
-			font-size: 40px
+			
+			border-bottom: 1px solid #484848
 
-		&__table
-			display: table
-			min-width: 100%
+			margin: 50px 0
 
-			tbody
-				display: table-row-group
+			&:nth-child(n+2)
+				display: block
 
-			tr
-				display: table-row
+			&:last-child
+				border-bottom: 0
 
-			td
-				display: table-cell
-				border: 2px solid #5e5e5e
-				padding: 12px 19px
-				vertical-align: top
+		&__icon
+			width: 160px
+			float: left
+			text-align: center
 
-			.col-1
-				display: table-cell
-				text-align: center
-				font-weight: 400
-				color: rgba(255,255,255, 0.3)
+		&__desc
+			padding: 0
 
-			.col-2
-				padding: 12px 19px
-
-			.col-3
-				width: auto
-				padding: 12px 19px
-
-			.col-4
-				padding: 12px 19px
-
+		&__dots
+			display: none
 
 @media (min-width: $desktop)
-	.price
-		display: flex
-		flex-wrap: wrap
-		justify-content: space-between
+	.advantages
+		padding-bottom: 1%
+		
+		&__items
+			display: flex
+			flex-direction: row
+			flex-wrap: nowrap
+			justify-content: space-between
+		
+		&__item
+			border-bottom: 0
+			text-align: center
+			flex-basis: 320px
 
-		&__header
-			width: 100%
+			border-right: 1px solid #484848
 
-		&__table
-			min-width: auto
+			&:nth-child(2)
 
-		&__discount
-			width: 270px
-			height: auto
-			margin: 0
-			padding: 10px 50px
-			padding-top: 190px
-			font-size: 20px
-			line-height: 1.2
-			text-decoration: none
-			font-weight: normal
+				.advantages__desc
 
-			&:before
-				+size(140px)
-				left: 50%
-				top: 25px
-				transform: translate(-50%, 0)
+					padding: 0 60px
+
+			&:last-child
+				border-right: 0
+
+		&__icon
+			float: none
+			text-align: center
+			width: auto
+
+		&__desc
+			padding: 0 40px
+
+
