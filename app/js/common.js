@@ -100,3 +100,15 @@ closeBtn.addEventListener('click', function() {
 });
 
 // END POPUP
+
+
+// SVG
+svg4everybody({
+	validate: function (src, svg, use) {
+		src: '../img/symbols.svg' 
+		// svg: current SVG Element 
+		// use: current USE Element 
+
+		return true; // ok, everything is valid
+	}
+});
