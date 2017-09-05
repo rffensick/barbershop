@@ -38,6 +38,15 @@
 		&:nth-child(n+3)
 			display: none
 
+		&:hover
+			.news__date
+				background-color: #826550
+				&::before
+					border-bottom-color: #826550
+					border-right-color: #826550
+			.news__desc
+				color: #826550
+
 	&__date
 		font-size: 30px
 		line-height: 1
@@ -59,7 +68,7 @@
 		&:before
 			content: ''
 			position: absolute
-			
+
 			bottom: -24px
 			left: 16%
 
@@ -75,11 +84,14 @@
 
 			display: block
 
+
 	&__desc
 		margin: 0
 		font-size: 18px
 
 		line-height: 27px
+
+		color: black
 
 	&__btn-more
 		flex-grow: 1

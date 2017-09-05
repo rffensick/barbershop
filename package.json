@@ -1,12 +1,12 @@
 {
   "name": "eduard",
-  "version": "2.0",
+  "version": "2.0.0",
   "description": "Start HTML Template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "WebDesign Master",
+  "author": "Eduard Ilyaskin",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.12",
