@@ -18,7 +18,8 @@ var gulp           = require('gulp'),
 		plumber				 = require('gulp-plumber'),
 		svgmin				 = require('gulp-svgmin'),
 		svgstore			 = require('gulp-svgstore'),
-		watch					 = require('gulp-watch');
+		watch					 = require('gulp-watch'),
+		svgo 					 = require('gulp-svgo');
 
 // Скрипты проекта
 
@@ -29,6 +30,14 @@ var gulp           = require('gulp'),
 gulp.task('symbols', function() {
 	return gulp.src('app/img/icons/*.svg')
 	.pipe(svgmin())
+	.pipe(svgo({
+		plugins: [
+			{removeStyleElement: true},
+			{removeScriptElement: true},
+			{cleanupIDs: true},
+			{cleanupListOfValues: true}
+		]
+	}))
 	.pipe(svgstore({
 		inlineSvg: true
 	}))
@@ -124,9 +133,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      '',
-		user:      '',
-		password:  '',
+		host:      'rffensick.ru',
+		user:      'ilyaskkq_rffensick',
+		password:  '1998edya',
 		parallel:  10,
 		log: gutil.log
 	});
