@@ -1,0 +1,168 @@
+.news
+	background-color: #F9F5F2
+	color: black
+	padding-top: 50px
+
+	padding: 0 20px
+
+	&__wrapper
+		+container-fluid
+		display: flex
+		flex-direction: column
+
+	&__title
+		margin: 0
+		margin-top: 20px
+
+		font-size: 30px
+		line-height: 1
+		font-weight: bold
+
+		flex-basis: 100%
+
+		text-align: center
+
+		text-transform: uppercase
+
+	&__items
+		margin: 0
+		padding: 0
+		list-style: none
+
+	&__item
+		display: flex
+		align-items: flex-start
+
+		margin-top: 50px
+
+		&:nth-child(n+3)
+			display: none
+
+		&:hover
+			.news__date
+				background-color: #826550
+				&::before
+					border-bottom-color: #826550
+					border-right-color: #826550
+			.news__desc
+				color: #826550
+
+	&__date
+		font-size: 30px
+		line-height: 1
+		font-weight: bold
+		text-transform: uppercase
+		text-align: center
+
+		margin: 0
+
+		padding: 15px 20px
+
+		background-color: black
+		color: white
+
+		margin-right: 20px
+
+		position: relative
+
+		&:before
+			content: ''
+			position: absolute
+
+			bottom: -24px
+			left: 16%
+
+			border: 24px solid $tr
+			border-bottom-color: black
+			border-right-color: black
+
+			transform: rotate(45deg)
+
+		span
+			font-size: 16px
+			font-weight: 400
+
+			display: block
+
+
+	&__desc
+		margin: 0
+		font-size: 18px
+
+		line-height: 27px
+
+		color: black
+
+	&__btn-more
+		flex-grow: 1
+
+		border: 1px solid #e5ddd5
+
+		text-align: center
+		font-size: 18px
+		font-weight: bold
+		line-height: 24px
+
+		text-transform: uppercase
+
+		padding: 19px 0
+
+		margin-top: 40px
+
+		color: black
+
+		&:hover
+			background-color: black
+
+			color: white
+
+			text-decoration: none
+
+
+@media (min-width: $tablet)
+	.news
+		padding-top: 40px
+
+		&__wrapper
+			flex-direction: row
+			flex-wrap: wrap
+			align-items: center
+
+		&__title
+			order: 1
+			flex-basis: auto
+			margin-top: 0
+
+		&__items
+			order: 3
+			display: flex
+			justify-content: space-between
+
+		&__item
+			flex-basis: 50%
+			padding-right: 20px
+
+			&:nth-child(2)
+				padding-right: 0
+
+		&__btn-more
+			order: 2
+			flex-grow: 0
+			margin-left: auto
+
+			padding-left: 30px
+			padding-right: 30px
+
+			margin-top: 0
+
+@media (min-width: $desktop)
+	.news
+
+		&__item
+
+			&:nth-child(n+3)
+				display: flex
+
+		&__title
+			margin-left: 50px
+			font-size: 40px

@@ -1,3 +1,23 @@
+// ANIMATION
+@keyframes bounce
+	0%
+		transform: translateY(-2000px)
+	70%
+		transform: translateY(30px)
+	90%
+		transform: translateY(-10px)
+	100%
+		transform: translateY(0)
+
+@keyframes shake-error
+	0%, 100%
+		transform: translateX(0)
+	10%, 30%, 50%, 70%, 90%
+		transform: translateX(-10px)
+	20%, 40%, 60%, 70%, 80%
+		transform: translateX(10px)
+
+
 .popup-login
 	background-color: #F9F5F2
 	padding: 20px 20px
@@ -6,7 +26,18 @@
 	left: 0
 	right: 0
 	color: black
-	z-index: 4
+	z-index: 99
+	box-shadow: 1px 48px 28px 0px rgba(0,0,0,0.75)
+
+	&--closed
+		display: none
+
+	&--opened
+		display: block
+		animation: bounce 0.4s
+
+	&--error
+		animation: shake-error 0.6s
 	
 	h1 
 		color: black
@@ -16,6 +47,7 @@
 		line-height: 1
 		text-align: center
 		text-transform: uppercase
+		margin-bottom: 20px
 
 	&__enter
 		font-size: 18px
@@ -36,6 +68,26 @@
 		border: 1px solid #E9DED6
 		+placeholder-color(black)
 
+		&:focus
+			outline-color: #826550
+
+	input[name="login"]
+		background:
+			image: url('../img/icons/user.png')
+			repeat: no-repeat
+			size: 15px 15px
+			position: 90% center
+
+	input[name="password"]
+		background:
+			image: url('../img/icons/Locked.png')
+			repeat: no-repeat
+			size: 15px 15px
+			position: 90% center
+
+	&__group-checkbox
+		margin-top: 30px
+
 	&__check
 		display: inline-block
 		text-align: left
@@ -46,7 +98,6 @@
 		margin-right: 9px
 		background: $tr
 
-
 	&__forgot
 		display: inline-block
 		text-align: right
@@ -54,3 +105,107 @@
 		font-size: 18px
 		color: black
 		text-decoration: underline
+
+	&__group-enter
+		margin-top: 30px
+		display: flex
+		justify-content: space-between
+
+	input[type="button"],
+	input[type="submit"]
+		font-size: 18px
+		text-transform: uppercase
+		background-color: #826550
+		border: none
+		color: white
+		padding: 15px 30px
+		font-weight: bold
+		width: 130px
+		+text-overflow
+
+	&__close-btn
+		background-color: $tr!important
+		color: black!important
+		border: 1px solid #e5ddd5!important
+
+	&__close-btn + span
+		display: none
+
+
+// MEDIA
+@media (min-width: $tablet)
+	.popup-login
+		width: 460px
+		left: 50%
+		right: auto
+		margin-left: -230px
+		padding: 30px 70px
+
+		input[type="submit"]
+			width: 100%
+
+		&__close-btn
+			position: absolute
+			top: 0
+			right: -65px
+			width: 50px!important
+			height: 50px
+			font-size: 0!important
+			background-color: $tr!important
+			padding: 0
+			border: none!important
+
+			&:active
+				outline: none
+
+		&__close-btn + span
+			position: absolute
+			top: 0
+			right: -65px
+			+size(50px)
+			display: block
+			pointer-events: none
+			+tr(.25s ease)
+
+			&:before
+				content: ''
+				position: absolute
+				top: 15px
+				left: 3px
+
+				width: 50px
+				height: 2px
+
+				background-color: #fff
+				box-shadow: 0 8px 0 0 #fff, 0 16px 0 0 #fff
+
+			&:after,
+			&:before
+				+tr(1s ease)
+				content: ''
+				position: absolute
+				top: 24px
+				left: 3px
+
+				width: 36px
+				height: 2px
+
+				background-color: #fff
+
+			&:before
+				transform: rotate(45deg)
+				box-shadow: none
+
+			&:after
+				transform: rotate(-45deg)
+
+			&:active:before,
+			&:active:after
+				background-color: rgba(255,255,255, 0.3)
+
+		&__close-btn:hover + span
+			&:after
+				transform: rotate(-405deg)
+			&:before
+				transform: rotate(-495deg)
+				
