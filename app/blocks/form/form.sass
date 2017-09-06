@@ -1,0 +1,276 @@
+.form
+	background-color: #f8f5f2
+	color: black
+	padding: 5% 20px
+	position: relative
+
+	&__wrapper
+		+container-fluid
+
+	&__title
+		text-transform: uppercase
+		text-align: center
+
+		font-size: 30px
+
+		margin-top: 0
+
+		padding-top: 2rem
+
+	&__group
+		display: flex
+		flex-direction: column
+		margin-bottom: 25px
+
+	input, textarea
+		display: block
+		margin: 5px 0
+		border: 1px solid #e5ddd5
+		padding: 12px 14px
+
+		font-size: 18px
+		line-height: 30px
+		font-weight: bold
+
+	textarea
+		height: 130px
+		resize: none
+
+	&__title-beard
+		font-size: 20px
+		line-height: 27px
+		font-weight: 400
+
+		text-transform: uppercase
+
+		text-align: center
+
+	&__beard-items
+		display: flex
+		align-items: flex-start
+		flex-wrap: wrap
+
+	&__beard-item
+		flex-basis: 33.33%
+		display: flex
+		align-items: center
+		flex-direction: column
+
+		padding: 10px 0
+
+	&__title-of-beard
+		font-size: 18px
+		line-height: 24px
+		font-weight: bold
+
+	&__beard-check
+		display: none!important
+
+	&__beard-check + .form__title-of-beard
+		position: relative
+		cursor: pointer
+		&:before
+			content: ''
+			border: 1px solid #e7dfd7
+			display: block
+			+size(50px)
+			border-radius: 10em
+			background-color: #fff
+			margin: 0 auto
+
+		&:active
+			&:before
+				background-color: #e7dfd7
+
+		&:hover
+			&:before
+				border-color: darken(#e7dfd7, 20%)
+			&:after
+				border-color: darken(#e7dfd7, 20%)
+
+	&__beard-check:checked + .form__title-of-beard
+		&:after
+			content: ''
+			position: absolute
+			top: 13px
+			left: 51%
+			margin-left: calc(-25px / 2)
+			border: 1px solid darken(#e7dfd7, 20%)
+			+size(25px)
+			border-radius: 10em
+			background-color: #e7dfd7
+		&:before
+			border-color: darken(#e7dfd7, 20%)
+
+	.beard-1
+		width: 52px
+		height: 49px
+	.beard-2
+		width: 58px
+		height: 68px
+	.beard-3
+		width: 64px
+		height: 78px
+	.beard-4
+		width: 58px
+		height: 98px
+	.beard-5
+		width: 46px
+		height: 102px
+
+
+	&__title-add-services
+		font-size: 20px
+		line-height: 27px
+		font-weight: 400
+
+		text-transform: uppercase
+
+		text-align: center
+
+		margin-top: 40px
+
+	&__add-services-check
+		display: none!important
+
+	&__add-services-item
+		margin: 20px 0
+
+	&__add-services-title
+		font-size: 18px
+		line-height: 30px
+		font-weight: 400
+		display: inline-block
+
+	&__add-services-check + .form__add-services-title
+		position: relative
+		cursor: pointer
+		&::before
+			content: ''
+			+size(35px)
+			border: 1px solid #e5ddd5
+			display: inline-block
+			vertical-align: middle
+			background-color: #fff
+
+			margin-right: 25px
+
+		&:hover
+			&:before
+				border-color: darken(#e5ddd5, 20%)
+
+		&:active
+			&:before
+				background-color: darken(#e5ddd5, 20%)
+
+	&__add-services-check:checked + .form__add-services-title
+		&:after
+			content: '✓'
+			position: absolute
+			left: 5px
+			top: 2px
+			font-size: 35px
+		&:before
+			border-color: darken(#e5ddd5, 20%)
+
+	&__enroll-submit
+		width: 100%
+
+		font-size: 18px
+		font-weight: bold
+
+		background-color: #826550
+		color: white
+		text-transform: uppercase
+
+	&__btn-home
+		display: none
+
+
+@media (min-width: $tablet)
+	.form
+
+		&__wrapper
+			display: flex
+			flex-wrap: wrap
+
+			align-items: center
+
+		&__btn-home
+			display: block
+			margin-top: 0
+			margin-left: auto
+			padding-left: 30px
+			padding-right: 30px
+
+		&__enroll
+			flex-basis: 100%
+
+			margin-top: 40px
+
+		&__personal-information
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: space-between
+
+			input
+				flex-grow: 1
+				margin-left: -1px
+
+		textarea
+			height: 210px
+			resize: none
+
+		&__input-name
+			order: -1
+
+		&__title-add-services,
+		&__title-beard
+			display: flex
+			align-items: center
+			white-space: nowrap
+
+			span
+				margin: 0 30px
+
+			&:before, &:after
+				content: ''
+				height: 2px
+				width: 100%
+				background-color: #e5ddd5
+				position: relative
+
+		&__beard-items
+			flex-wrap: nowrap
+
+		&__add-services-items
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+
+		&__add-services-item
+			flex-basis: 50%
+
+		&__enroll-submit
+			margin-top: 40px!important
+
+
+@media (min-width: $desktop)
+	.form
+
+		&__personal-information
+
+			input
+				flex-grow: 0
+				width: 300px
+
+		&__contacts
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+
+			input
+				width: 460px
+
+		&__add-services-item
+			flex-basis: 33.33%

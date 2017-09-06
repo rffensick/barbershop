@@ -1,0 +1,18 @@
+include settings/settings
+include mixins/mixins
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		+settings()
+	body
+		include blocks/header/header
+		include blocks/form/form 
+		include blocks/footer/footer
+
+		//- POPUPS
+		include blocks/popups/popups
+		
+		
+		link(rel="stylesheet" href="css/main.min.css")
+		script(src="js/scripts.min.js")
