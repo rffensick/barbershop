@@ -19,7 +19,9 @@ var gulp           = require('gulp'),
 		svgmin				 = require('gulp-svgmin'),
 		svgstore			 = require('gulp-svgstore'),
 		watch					 = require('gulp-watch'),
-		svgo 					 = require('gulp-svgo');
+		svgo 					 = require('gulp-svgo'),
+		cheerio				 = require('gulp-cheerio'),
+		clean          = require('gulp-cheerio-clean-svg');
 
 // Скрипты проекта
 
@@ -29,19 +31,52 @@ var gulp           = require('gulp'),
 
 gulp.task('symbols', function() {
 	return gulp.src('app/img/icons/*.svg')
-	.pipe(svgmin())
+	.pipe(svgmin({
+		js2svg: {
+			pretty: true
+		}
+	}))
 	.pipe(svgo({
-		plugins: [
-			{removeStyleElement: true},
-			{removeScriptElement: true},
-			{cleanupIDs: true},
-			{cleanupListOfValues: true}
-		]
+		plugins: [{
+			removeStyleElement: true
+		},{
+			removeScriptElement: true
+		},{
+			removeAttrs: true
+		},{
+			removeUnusedNS: true
+		},{
+			removeUnknownsAndDefaults: true
+		},{
+			removeHiddenElems: true
+		},{
+			removeXMLNS: true
+		},{
+			cleanupAttrs: true
+		},{
+			removeAttrs: {
+				attrs: ['id', 'class']
+			}
+		},{
+			cleanupNumericValues: true
+		},{
+			convertTransform: true
+		},{
+			convertPathData: true
+		},{
+			removeEmptyText: true
+		},{
+			cleanupListOfValues: true
+		},{
+			sortAttrs: true
+		},{
+			transformsWithOnePath: true
+		}]
 	}))
 	.pipe(svgstore({
 		inlineSvg: true
 	}))
-	.pipe(rename('symbols.svg'))
+	.pipe(rename('sprite.svg'))
 	.pipe(gulp.dest('app/img'))
 });
 
