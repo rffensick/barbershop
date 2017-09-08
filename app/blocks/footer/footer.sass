@@ -1,5 +1,8 @@
 .footer
 
+	&__wrapper
+		+container-fluid
+
 	&__title
 		font-size: 18px
 		font-weight: bold
@@ -26,10 +29,9 @@
 			margin-top: 25px
 
 			padding: 15px 0
-	
+
 	&__block-2
 		display: flex
-		
 
 	&__icon
 		border: 1px solid #3e3e3e
@@ -63,3 +65,79 @@
 		width: 100%
 
 		padding: 15px 0
+
+
+@media (min-width: $tablet)
+	.footer
+		padding: 30px 60px
+
+		&__blocks
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			justify-content: center
+
+		&__block-1
+			order: 1
+			margin-right: auto
+
+			.span1
+				display: block
+				display: inline
+
+			.span2
+				border: 0
+				margin: 0
+				font-weight: 400
+				display: inline
+
+
+		&__block-2
+			order: 3
+			flex-basis: 100%
+
+			margin-top: 50px
+
+		&__block-3
+			order: 2
+
+		&__desc
+			padding: 0
+			text-align: left
+
+		&__title
+			text-align: left
+
+		&__btn-author
+			padding:
+				left: 60px
+				right: 60px
+
+@media (min-width: $desktop)
+	.footer
+
+		&__blocks
+			justify-content: space-between
+			flex-wrap: nowrap
+			align-content: center
+
+		&__block
+			flex-basis: 33.33%
+
+		&__block-1
+			margin: 0
+
+		&__block-2
+			order: 2
+			justify-content: center
+			margin-top: 0
+
+		&__icon
+			padding: 20px 0
+
+		&__btn-author
+			padding:
+				left: 10px
+				right: 10px
+			width: 150px
+			margin: 0 auto

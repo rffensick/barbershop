@@ -12,6 +12,7 @@ $(function() {
 	// $(window).bind('load resize', hf)
 
 });
+svg4everybody();
 
 // MENU
 

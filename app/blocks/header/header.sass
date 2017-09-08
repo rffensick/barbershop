@@ -10,15 +10,17 @@
 		order: 2
 		height: 85px
 		text-align: center
-		svg
+		.logotype-mobile
 			width: 230px
 			height: 85px
+			fill: #fff
+			stroke: none
 		@media (min-width: $tablet)
 			display: none
 
 	&__logo
 		display: none
-		
+
 		@media (min-width: $tablet)
 			display: block
 
@@ -34,22 +36,19 @@
 			background-repeat: no-repeat
 			background-position: center -9px
 
-			svg
+			.logotype-desktop
 				width: 375px
 				height: 120px
 				margin-top: 45px
-				#logotype-desktop
-					width: 375px
-					height: 100px
+				fill: #fff
 
-			
 		@media (min-width: $desktop)
 			height: 648px
 
 			background-position: center 0px
 			background-size: cover
 
-			svg
+			.logotype-desktop
 				width: 370px
 				height: 165px
 
@@ -113,7 +112,7 @@
 
 	.main-nav__user-login
 		position: relative
-		
+
 		display: block
 		padding: 17px 21px
 		padding-left: 49px
@@ -121,7 +120,7 @@
 		line-height: 18px
 		font-size: 18px
 		color: #fff
-		text-decoration: none	
+		text-decoration: none
 
 		&:before
 			content: ''
@@ -133,7 +132,7 @@
 
 			background-image: url("../img/login.png")
 			background-position: center
-			
+
 
 
 	&__toggle
@@ -239,7 +238,7 @@
 
 			box-shadow: inset 4px 0 7px -2px rgba(0,0,0, 0.4)
 
-	.main-nav--nojs 
+	.main-nav--nojs
 		.main-nav__toggle
 			display: none
 
@@ -279,7 +278,7 @@
 				height: 3px
 
 				background-color: #826550
-		
+
 	.main-nav__item
 		a
 			padding: 0
