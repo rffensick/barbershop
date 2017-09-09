@@ -1,24 +1,26 @@
-header.header
-	.page-header
-		h1.visually-hidden Барбершоп "Бородинский" - истинно мужская классика
-		.page-header__logo-mobile
-			+icon('logotype-mobile')
-		.page-header__logo
-			+icon('logotype-desktop')
-		nav.main-nav.main-nav--closed.main-nav--nojs
-			button(type="button").main-nav__toggle Открыть меню
-			.main-nav__wrapper
-				ul.main-nav__items
-					li.main-nav__item
-						a(href="/") Главная
-					li.main-nav__item.main-nav__item--active
-						a(href="works.html") Наши работы
-					li.main-nav__item
-						a(href="form.html") Записаться
-					li.main-nav__item
-						a(href="#") Контакты
-					li.main-nav__item
-						a(href="#") HTML Academy
-				ul.main-nav__user-items
-					li.main-nav__user-item
-						a(href="#" title="Войти").main-nav__user-login Войти
+mixin header()
+
+	header.header
+		.page-header
+			h1.visually-hidden Барбершоп "Бородинский" - истинно мужская классика
+			.page-header__logo-mobile
+				+icon('logotype-mobile')
+			.page-header__logo
+				+icon('logotype-desktop')
+			nav.main-nav.main-nav--closed.main-nav--nojs
+				button(type="button").main-nav__toggle Открыть меню
+				.main-nav__wrapper
+					ul.main-nav__items
+						li.main-nav__item
+							a(href="/") Главная
+						li.main-nav__item.main-nav__item--active
+							a(href="works.html") Наши работы
+						li.main-nav__item
+							a(href="form.html") Записаться
+						li.main-nav__item
+							a(href="#") Контакты
+						li.main-nav__item
+							a(href="#") HTML Academy
+					ul.main-nav__user-items
+						li.main-nav__user-item
+							a(href="#" title="Войти").main-nav__user-login Войти

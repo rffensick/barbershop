@@ -1,72 +1,73 @@
-section.form
-	.form__wrapper
-		
-		h1.form__title Запись на стрижку
-		
-		a(href="/").btn-default.form__btn-home На главную
-		
-		form(id="enroll", method="get", action="#").form__enroll
-		
-			.form__group.form__personal-information
-				input(type="text", placeholder="Фамилия" required name="Фамилия").form__input-lastname
-				input(type="text", placeholder="Имя" required name="Имя").form__input-name
-				input(type="text", placeholder="Отчество" name="Отчество").form__input-patronymic
-				
-			.form__group.form__contacts
-				input(type="number", placeholder="Контактный телефон" required name="Контактный телефон").form__input-phone
-				input(type="email", placeholder="Контактный email" name="Контактный email").form__input-email
+mixin forms()
+	section.form
+		.form__wrapper
+			
+			h1.form__title Запись на стрижку
+			
+			a(href="/").btn-default.form__btn-home На главную
+			
+			form(id="enroll", method="get", action="#").form__enroll
+			
+				.form__group.form__personal-information
+					input(type="text", placeholder="Фамилия" required name="Фамилия").form__input-lastname
+					input(type="text", placeholder="Имя" required name="Имя").form__input-name
+					input(type="text", placeholder="Отчество" name="Отчество").form__input-patronymic
+					
+				.form__group.form__contacts
+					input(type="number", placeholder="Контактный телефон" required name="Контактный телефон").form__input-phone
+					input(type="email", placeholder="Контактный email" name="Контактный email").form__input-email
 
-			.form__group.form__more-information
-				textarea(placeholder="Доп. информация для мастера")
-					
-			h1.form__title-beard 
-				span Выберите модель бороды:
-			
-			.form__beard-items
-				label.form__beard-item
-					input(type="radio", placeholder="placeholder", name="Борода", value="Адмирал" id="admiral" checked).form__beard-check
-					label(for="admiral").form__title-of-beard Адмирал
-					+icon("beard-1")
-				label.form__beard-item
-					input(type="radio", placeholder="placeholder", name="Борода", value="Лесоруб", id="lesorub").form__beard-check
-					label(for="lesorub").form__title-of-beard Лесоруб
-					+icon("beard-2")
-				label.form__beard-item
-					input(type="radio", placeholder="placeholder", name="Борода", value="Полярник", id="polyarnik").form__beard-check
-					label(for="polyarnik").form__title-of-beard Полярник
-					+icon("beard-3")
-				label.form__beard-item
-					input(type="radio", placeholder="placeholder", name="Борода", value="Боярин", id="boyarin").form__beard-check
-					label(for="boyarin").form__title-of-beard Боярин
-					+icon("beard-4")
-				label.form__beard-item
-					input(type="radio", placeholder="placeholder", name="Борода", value="Мудрец", id="mudrec").form__beard-check
-					label(for="mudrec").form__title-of-beard Мудрец
-					+icon("beard-5")
-			
-			.form__add-services
-				h1.form__title-add-services 
-					span Дополнительные услуги:
-				
-				.form__add-services-items
-					
-					.form__add-services-item
-						input(type="checkbox", checked, value="Подкрасить бороду" id="first" name="еще").form__add-services-check
-						label(for="first").form__add-services-title Подкрасить бороду
-					.form__add-services-item
-						input(type="checkbox" value="Накрутить усы" id="second" name="еще").form__add-services-check
-						label(for="second").form__add-services-title Накрутить усы
-					.form__add-services-item
-						input(type="checkbox" value="Причесать бороду" id="third", name="еще").form__add-services-check
-						label(for="third").form__add-services-title Причесать бороду
-					.form__add-services-item
-						input(type="checkbox" value="Подровнять виски" id="four", name="еще").form__add-services-check
-						label(for="four").form__add-services-title Подровнять виски
-					.form__add-services-item
-						input(type="checkbox" value="Убрать седину" id="five", name="еще").form__add-services-check
-						label(for="five").form__add-services-title Убрать седину
-					.form__add-services-item
-						input(type="checkbox" value="Отполировать лысину" id="six" name="еще").form__add-services-check
-						label(for="six").form__add-services-title Отполировать лысину
+				.form__group.form__more-information
+					textarea(placeholder="Доп. информация для мастера")
 						
-			input(type="submit" value="Отправить заявку").form__enroll-submit
+				h1.form__title-beard 
+					span Выберите модель бороды:
+				
+				.form__beard-items
+					label.form__beard-item
+						input(type="radio", placeholder="placeholder", name="Борода", value="Адмирал" id="admiral" checked).form__beard-check
+						label(for="admiral").form__title-of-beard Адмирал
+						+icon("beard-1")
+					label.form__beard-item
+						input(type="radio", placeholder="placeholder", name="Борода", value="Лесоруб", id="lesorub").form__beard-check
+						label(for="lesorub").form__title-of-beard Лесоруб
+						+icon("beard-2")
+					label.form__beard-item
+						input(type="radio", placeholder="placeholder", name="Борода", value="Полярник", id="polyarnik").form__beard-check
+						label(for="polyarnik").form__title-of-beard Полярник
+						+icon("beard-3")
+					label.form__beard-item
+						input(type="radio", placeholder="placeholder", name="Борода", value="Боярин", id="boyarin").form__beard-check
+						label(for="boyarin").form__title-of-beard Боярин
+						+icon("beard-4")
+					label.form__beard-item
+						input(type="radio", placeholder="placeholder", name="Борода", value="Мудрец", id="mudrec").form__beard-check
+						label(for="mudrec").form__title-of-beard Мудрец
+						+icon("beard-5")
+				
+				.form__add-services
+					h1.form__title-add-services 
+						span Дополнительные услуги:
+					
+					.form__add-services-items
+						
+						.form__add-services-item
+							input(type="checkbox", checked, value="Подкрасить бороду" id="first" name="еще").form__add-services-check
+							label(for="first").form__add-services-title Подкрасить бороду
+						.form__add-services-item
+							input(type="checkbox" value="Накрутить усы" id="second" name="еще").form__add-services-check
+							label(for="second").form__add-services-title Накрутить усы
+						.form__add-services-item
+							input(type="checkbox" value="Причесать бороду" id="third", name="еще").form__add-services-check
+							label(for="third").form__add-services-title Причесать бороду
+						.form__add-services-item
+							input(type="checkbox" value="Подровнять виски" id="four", name="еще").form__add-services-check
+							label(for="four").form__add-services-title Подровнять виски
+						.form__add-services-item
+							input(type="checkbox" value="Убрать седину" id="five", name="еще").form__add-services-check
+							label(for="five").form__add-services-title Убрать седину
+						.form__add-services-item
+							input(type="checkbox" value="Отполировать лысину" id="six" name="еще").form__add-services-check
+							label(for="six").form__add-services-title Отполировать лысину
+							
+				input(type="submit" value="Отправить заявку").form__enroll-submit

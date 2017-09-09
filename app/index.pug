@@ -1,24 +1,22 @@
-include settings/settings
-include mixins/mixins
+include layout/sections
 
 <!DOCTYPE html>
 html(lang="ru")
 	head
 		+settings()
 	body
-		include blocks/header/header
-		include blocks/mock/mock
-		include blocks/advantages/advantages
-		include blocks/news/news
-		include blocks/reviews/reviews
-		include blocks/footer/footer
-		
-		//- SVG
-		include mixins/sprite
+		+header()
+		+mock()
+		+advantages()
+		+news()
+		+reviews()
+		+footer()
 		
 		//- POPUPS
 		include blocks/popups/popups
 
+		//- SVG
+		include mixins/sprite
 
 		link(rel="stylesheet" href="css/main.min.css")
 		script(src="js/scripts.min.js")

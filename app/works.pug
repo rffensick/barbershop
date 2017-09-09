@@ -1,21 +1,20 @@
-include settings/settings
-include mixins/mixins
+include layout/sections
+
 
 <!DOCTYPE html>
 html(lang="ru")
 	head
 		+settings()
 	body
-		include blocks/header/header
-		include blocks/works/works
-		include blocks/footer/footer
-		
-		//- SVG
-		include mixins/sprite
+		+header()
+		+works()
+		+footer()
 		
 		//- POPUPS
 		include blocks/popups/popups
-
+		
+		//- SVG
+		include mixins/sprite
 
 		link(rel="stylesheet" href="css/main.min.css")
 		script(src="js/scripts.min.js")
