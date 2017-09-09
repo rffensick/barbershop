@@ -6,11 +6,13 @@ html(lang="ru")
 	head
 		+settings()
 	body
-		include mixins/svg
 		include blocks/header/header
-		include blocks/form/form 
+		include blocks/form/form
 		include blocks/footer/footer
-
+		
+		//- SVG
+		include mixins/sprite
+		
 		//- POPUPS
 		include blocks/popups/popups
 		

@@ -9,7 +9,8 @@
   "author": "Eduard Ilyaskin",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.18.12",
+    "browser-sync": "^2.18.13",
+    "bs-html-injector": "^3.0.3",
     "colors": "^1.1.2",
     "del": "^3.0.0",
     "gulp": "^3.9.1",

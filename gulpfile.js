@@ -21,11 +21,6 @@ var gulp           = require('gulp'),
 		watch					 = require('gulp-watch'),
 		svgo 					 = require('gulp-svgo');
 
-// Скрипты проекта
-
-// gulp.task('stream', function () {
-//
-// });
 
 gulp.task('symbols', function() {
 	return gulp.src('app/img/icons/*.svg')
@@ -74,8 +69,8 @@ gulp.task('symbols', function() {
 	.pipe(svgstore({
 		inlineSvg: true
 	}))
-	.pipe(rename('sprite.svg'))
-	.pipe(gulp.dest('app/img'))
+	.pipe(rename('sprite.pug'))
+	.pipe(gulp.dest('app/mixins'))
 });
 
 gulp.task('common-js', function() {
@@ -127,13 +122,14 @@ gulp.task('pug', function() {
 	.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 	.pipe(pug({pretty: true}))
 	.pipe(gulp.dest('app/'))
+	.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('watch', ['sass', 'js', 'pug', 'browser-sync'], function() {
 	gulp.watch(['app/blocks/**/*.sass', 'app/sass/**/*.sass'], ['sass']);
 	gulp.watch(['app/*.pug', 'app/blocks/**/*.pug', 'app/settings/settings.pug', 'app/mixins/*.pug'], ['pug']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-	gulp.watch('app/*.html', browserSync.reload)
+	// gulp.watch('app/*.html', browserSync.reload)
 });
 
 gulp.task('imagemin', function() {
