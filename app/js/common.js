@@ -73,7 +73,6 @@ navToggle.addEventListener('click', function() {
 // POPUP!
 
 
-
 openMenu.addEventListener('click', function(e) {
 	e.preventDefault();
 	if (popupLogin.classList.contains('popup-login--closed')) {
