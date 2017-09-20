@@ -1,15 +1,18 @@
-include settings/settings
-include mixins/mixins
+include layout/sections
+
 
 <!DOCTYPE html>
 html(lang="ru")
 	head
 		+settings()
 	body
-		include blocks/header/header
-		include blocks/form/form 
-		include blocks/footer/footer
-
+		+header()
+		+forms()
+		+footer()
+		
+		//- SVG
+		include mixins/sprite
+		
 		//- POPUPS
 		include blocks/popups/popups
 		

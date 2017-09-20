@@ -12,6 +12,7 @@ $(function() {
 	// $(window).bind('load resize', hf)
 
 });
+svg4everybody();
 
 // MENU
 
@@ -70,7 +71,6 @@ navToggle.addEventListener('click', function() {
 // END MENU
 
 // POPUP!
-
 
 
 openMenu.addEventListener('click', function(e) {

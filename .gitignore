@@ -1,7 +1,7 @@
 /node_modules/
 /.git/
+/app/*.html/
 /app/css/
-/app/*.html
 /**/*.psd
 /**/Thumbs.db
 /**/*.DS_Store

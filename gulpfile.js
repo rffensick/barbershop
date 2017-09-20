@@ -18,22 +18,59 @@ var gulp           = require('gulp'),
 		plumber				 = require('gulp-plumber'),
 		svgmin				 = require('gulp-svgmin'),
 		svgstore			 = require('gulp-svgstore'),
-		watch					 = require('gulp-watch');
+		watch					 = require('gulp-watch'),
+		svgo 					 = require('gulp-svgo');
 
-// Скрипты проекта
-
-// gulp.task('stream', function () {
-//
-// });
 
 gulp.task('symbols', function() {
 	return gulp.src('app/img/icons/*.svg')
-	.pipe(svgmin())
+	.pipe(svgmin({
+		js2svg: {
+			pretty: true
+		}
+	}))
+	.pipe(svgo({
+		plugins: [{
+			removeStyleElement: true
+		},{
+			removeScriptElement: true
+		},{
+			removeAttrs: true
+		},{
+			removeUnusedNS: true
+		},{
+			removeUnknownsAndDefaults: true
+		},{
+			removeHiddenElems: true
+		},{
+			removeXMLNS: true
+		},{
+			cleanupAttrs: true
+		},{
+			removeAttrs: {
+				attrs: ['id', 'class']
+			}
+		},{
+			cleanupNumericValues: true
+		},{
+			convertTransform: true
+		},{
+			convertPathData: true
+		},{
+			removeEmptyText: true
+		},{
+			cleanupListOfValues: true
+		},{
+			sortAttrs: true
+		},{
+			transformsWithOnePath: true
+		}]
+	}))
 	.pipe(svgstore({
 		inlineSvg: true
 	}))
-	.pipe(rename('symbols.svg'))
-	.pipe(gulp.dest('app/img'))
+	.pipe(rename('sprite.pug'))
+	.pipe(gulp.dest('app/mixins'))
 });
 
 gulp.task('common-js', function() {
@@ -85,13 +122,14 @@ gulp.task('pug', function() {
 	.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 	.pipe(pug({pretty: true}))
 	.pipe(gulp.dest('app/'))
+	.pipe(browserSync.stream());
 });
 
 gulp.task('watch', ['sass', 'js', 'pug', 'browser-sync'], function() {
 	gulp.watch(['app/blocks/**/*.sass', 'app/sass/**/*.sass'], ['sass']);
 	gulp.watch(['app/*.pug', 'app/blocks/**/*.pug', 'app/settings/settings.pug', 'app/mixins/*.pug'], ['pug']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-	gulp.watch('app/*.html', browserSync.reload)
+	gulp.watch('app/*.html', browserSync.reload);
 });
 
 gulp.task('imagemin', function() {
@@ -124,9 +162,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      '',
-		user:      '',
-		password:  '',
+		host:      'rffensick.ru',
+		user:      'ilyaskkq_rffensick',
+		password:  '1998edya',
 		parallel:  10,
 		log: gutil.log
 	});

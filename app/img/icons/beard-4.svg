@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58" height="98" viewBox="0 0 58 98">
+<svg xmlns="http://www.w3.org/2000/svg" width="56.938" height="97.66" viewBox="0 0 56.938 97.66">
   <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -27,5 +27,13 @@
                                                                                                     
                            
 <?xpacket end="w"?></metadata>
-<image id="beard-4.svg" width="58" height="98" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAABiCAMAAAA2uDCAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEWCZVD///+CZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVAAAABqYUiJAAAAEXRSTlMAADCfII/fcBCvUEDPYIC/72ayo1sAAAABYktHRBJ7vGwAAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QkGEzoO5caxfQAAAlRJREFUWMPF2ImSgyAMAFCVQ1QQ8/8/uxweINSSuDPN7MzO2r4VkkgpXbfHwLqm4Kzf47wkZBsdQd2pBN5EJ5hvdABYmqgGdqMGYG2iAPpGBUBTntzo4EYtgG2hs6NDTiXA1kJXR5ecuiugmhLskpJR5WlLinVBF09bUuzfx0o6fZfhfbakWSsOQsPmfiaTXh1L6hPnsn7VwMIZ23rlL1zWFSriH3yVkMe0JNk8eiKjYcRKQCXsco63SsHNS2moh5+zrFAWr0kVal4Pftwgp0dW9PBRgjDnP6nRtlj+icriZTkuIQz7QstiXB1kihfHRzon3VcMaU0or9J5kqtbJtX2RJdyPtLmv9OYnulT2ISuOCrpFBI6Iam6KK6Z9p6IdEPS+aJIGQsblzAsZSedsdSeFFsb2E7KsDRUh1SbWB1Sgt3yuFOOp2KnyOfGh90pOsExxZTm96Ei1QS6REqQvotpWQpdXF1nG0IHKigUAsW3YcwTYYmIYXpSG/oQPTHBvhVJbehj6ynPeQxFTXDYjNISHDZDROn2seg1+AhBrY3fbbygpOcmUmJH/I6+mOtvivOCvmjEF+1PpuOrR53yOeeDk5c16Ambphj23RJe+aLSEnNP2nD5UC8/XxWFjvQdDI+UUJ5jy0XI8bFHxCdKXnt/7G3NRZG31fRvzUNKOeZTNj/5wRRouh8GNk9XF+eIrfaUCe1My3ynU6a0G77vqdeur9JOfVmn7NB9ov4c9vOo47nRR+rubKrDlmI/AnugXs+rTW9u2XgdnT3TfezxDOZ+uHjRP6ZbF6t+njZ7AAAAAElFTkSuQmCC"/>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #727272;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="new_vector_shape_done" class="cls-1" d="M779,1258h1c0.2,5.41,1.718,16.96,6,18.5,1.8-3.63,10.373-8.82,17.5-6.5a61.386,61.386,0,0,1,7,3c1.518,0.89,1.614,2.69,3.5,3.5,0.855-1.59,2.419-3.75,3-5.5,1.252-3.77-.065-11.12,3-13v1c3.994,5.28,1.207,20.14,3,28,5.568,24.41,11.339,56.44-12,66-3.456,1.42-12.491,3.81-18.5,2-27.755-8.34-22.973-40.33-16.5-68v-7C777.5,1273.25,777.572,1264.07,779,1258Zm17,21c-0.866.86-1.392,0.75-2,2a2.549,2.549,0,0,0-.5,1.5,12.345,12.345,0,0,0,4,.5c1.928-1.71,4.2-.18,7.5,0a7.13,7.13,0,0,0,.5-2,1.816,1.816,0,0,1-.5-1A35.419,35.419,0,0,0,796,1279Z" transform="translate(-771.031 -1258)"/>
 </svg>

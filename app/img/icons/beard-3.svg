@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="78" viewBox="0 0 64 78">
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="78.09" viewBox="0 0 63 78.09">
   <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -27,5 +27,13 @@
                                                                                                     
                            
 <?xpacket end="w"?></metadata>
-<image id="beard-3.svg" width="64" height="78" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABOCAMAAACnveCcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEWCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVCCZVAAAAA/4h3pAAAAEHRSTlMAn2BAv++vjyBQ33DPEDCA4vOvIQAAAAFiS0dEEeK1PboAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhCQYTOgQFE1hjAAACF0lEQVRYw8VY0ZaEIAjNTMvM5P+/dp1qShNdxD1neZohuAECQsNwkxgHGskJ5ytNBJhhwdgGViLABBbHBSKAAtTWDUCS9B2AwtlgSAAySO4425MAxiCJHJgPbEEC+EjOOVsE9kQC0LjkBHhsyJIqsMFRAD6CUGBTznE/JLNjcAf7fQzyQy/eiL9KHuwoNovVK5yktI2SX9QA7iBIDSlNt4aqApwJ4t7qB8RphTn/ZeU0wuPDvgFGan88yJPWX1LBNLcCTirYsFy/s1QUcJugoUTRwywVp6+Q2KFMZrytQfPofFQBiJx7dbXaawvGpAC2GeAVRTxwq/bWC/xQtxQgd1wJ801LZ2YkMK4eApVWtsvNSILg8xf4UIejn6fZ2/ALEUj6H+5mneJMWBj6iQ+eBRD5sLIAnjiPLP2npB3PgMeEmakP1yXdXkcPyXIZ0Ghl50BkQnshxySiXsb1QXUBQNwMWbT3Ash+C3rS4Aii7AIYOzPxaM2Of5Dnfd3hxHdI4Naz/rOWxnQinpd77wVWX09uJsMASMYsThD+HyBZWjidNR12GQDpBNLeWl9bansivBa07jmxuZ6yUbf1gspWzNa+lH8AaAsjsuM2zSkK+wLRks7oB4iG1lha0gVRfyttyI7W2bbKhk2xYatu6L8f5jzUaa+7sRL2e1vOSeVJHxicXXvUDzLibUZYocjaVzCs+LapTfuy6z+m78kiz61qewAAAABJRU5ErkJggg=="/>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #727272;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="new_vector_shape_done" class="cls-1" d="M579.5,1259c4.524,4.23.566,16.6,6.5,19.5v0.5h0.5v-0.5c1.389-1.42,2.263-3.43,4-4.5,8.075-4.97,20.851-1.47,24,5,0.5-.17,1-0.33,1.5-0.5,0.683-2.41,2.325-5.05,3-7.5,1.2-4.38.546-8.42,2-12h0.5v0.5c3.786,5.09,1.373,14.62,3.5,21.5,2.447,7.92,6.895,12.22,7,22a21.815,21.815,0,0,0-5.5,8c-0.167,2.67-.333,5.33-0.5,8a25.918,25.918,0,0,1-10,14c-13.3,8.67-33.238,2.56-39-8.5-2.154-4.13-.932-10.77-3-15-2.456-5.02-5.072-4.28-5-13C577.614,1288.8,574.76,1270.69,579.5,1259Zm13.5,25v1.5h1c0.71,0.45,12.4.33,14,0V1284c-2.915-.46-5.987-2.45-10-1.5C596.364,1282.89,594.886,1283.7,593,1284Z" transform="translate(-569 -1259)"/>
 </svg>

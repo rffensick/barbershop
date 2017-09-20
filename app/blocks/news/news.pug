@@ -1,19 +1,20 @@
-section.news
-	.news__wrapper
-		h2.news__title Новости и акции
-		
-		ul.news__items
-			li.news__item
-				p.news__date 29
-					span сент
-				a(href="#", target="_blank").news__desc Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
-			li.news__item
-				p.news__date 19
-					span сент
-				a(href="#", target="_blank").news__desc В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!
-			li.news__item
-				p.news__date 9
-					span сент
-				a(href="#", target="_blank").news__desc Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!
-
-		a(href="#").news__btn-more Показать все
+mixin news()
+	section.news
+		.news__wrapper
+			h2.news__title Новости и акции
+			
+			ul.news__items
+				li.news__item
+					p.news__date 29
+						span сент
+					a(href="#").news__desc Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
+				li.news__item
+					p.news__date 19
+						span сент
+					a(href="#").news__desc В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!
+				li.news__item
+					p.news__date 9
+						span сент
+					a(href="#").news__desc Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!
+					
+			a(href="#").news__btn-more Показать все
